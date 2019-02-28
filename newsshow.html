@@ -1,0 +1,670 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>77种Java异常总结--问题</title>
+    <meta name="Author" content="张成&无风不起浪@你" src="tel:13469940053">
+    <meta name="keywords" content="无浪网、无浪素材网、无浪资源网、无风不起浪网" />
+    <meta name="description" content="无浪网由张成初期学习前端知识所做的项目，网页一体网站，仅供学习和资料共享使用！" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="generator" content="" data-variable="/,cn,10001,,10001,res032"/>
+    <link rel='stylesheet' href='css/index.css'></head>
+
+<body class="met-navfixed">
+    <!--[if lte IE 8]>
+    <div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+        <p class="browserupgrade font-size-18">
+            你正在使用一个 <strong>过时</strong>
+            的浏览器。请
+            <a href="#"​ target="_blank">升级您的浏览器</a>
+            ，以提高您的体验。
+        </p>
+    </div>
+    <![endif]-->
+    <header id="header" class="header-fixed">
+        <div class="container">
+            <ul class="head-list">
+                <li class="left tel">
+
+                    <img src="picture/1514354107.png" alt="">
+                    <span></span> <em>无浪网</em>
+                </li>
+                <li class="right">
+                    <ul>
+                        <li>
+                            <img src="picture/1514355047.png" alt="主页">
+                            <span>主页</span>
+                        </li>
+                        <li>
+                            <img src="picture/1514354958.png" alt="关于我">
+                            <span>关于我</span>
+                        </li>
+                        <li>
+                            <img src="picture/1514354817.png" alt="案例">
+                            <span>案例</span>
+                        </li>
+                        <li>
+                            <img src="picture/1514354461.png" alt="轻声细语">
+                            <span>轻声细语</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav class="navbar navbar-default met-nav navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle hamburger hamburger-close collapsed"
+                        data-target="#navbar-default-collapse" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                    <a href="#"​ class="navbar-brand navbar-logo vertical-align" title="(自适应手机端)">
+                        <h1 class='hide'>(自适应手机端)</h1>
+                        <div class="vertical-align-middle">
+                            <img src="picture/logo.png" alt="" title="无浪网"
+                                />
+                        </div>
+                    </a>
+                    <h2 class='hide'></h2>
+                </div>
+                <div class="collapse navbar-collapse navbar-collapse-toolbar" id="navbar-default-collapse">
+                    <ul class="nav navbar-nav navbar-right navlist">
+                        <li>
+                            <a href="index.html"​ title="首页" class="link  active">首页</a>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" href="about.html">
+                                关于我
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet">
+                                <li>
+                                    <a href="about.html"​ class="" title="个人简历">个人简历</a>
+                                </li>
+                                <li>
+                                    <a href="message.html"​ class="" title="在线留言">在线留言</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" href="product.html">
+                                案例展示
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet">
+                                <li>
+                                    <a href="productcate.html"​ class="" title="html">html</a>
+                                </li>
+                                <li>
+                                    <a href="productcate.html"​ class="" title="photoshop">photoshop</a>
+                                </li>
+                                <li>
+                                    <a href="productcate.html"​ class="" title="js">js</a>
+                                </li>
+                                <li>
+                                    <a href="productcate.html"​ class="" title="java">java</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" href="jidi.html">
+                                其他案例展示
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet">
+                                <li>
+                                    <a href="jidi.html"​ class="" title="">html+css</a>
+                                </li>
+                                <li>
+                                    <a href="jidi.html"​ class="" title="">canvas</a>
+                                </li>
+                                <li>
+                                    <a href="jidi.html"​ class="" title="">js</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class=" link " href="honor.html">其他上线案例</a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet"></ul>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class="dropdown-toggle link " data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" href="news.html">
+                                优秀网址分享
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet">
+                                <li>
+                                    <a href="news.html"​ class="" title="技术要领">编程区域</a>
+                                </li>
+                                <li>
+                                    <a href="news.html"​ class="" title="行业资讯">设计区域</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown margin-left-20">
+                            <a class=" link " href="contact.html">特效区</a>
+                            <ul class="dropdown-menu dropdown-menu-right bullet"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="met-shownews animsition">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 met-shownews-body">
+                    <div class="row">
+                        <div class="met-shownews-header">
+                            <h1>77种Java异常总结</h1>
+                            <div class="info">
+                                <span>2018-01-03 18:04</span>
+                                <span>张成</span>
+                                <span> <i class="icon wb-eye margin-right-5" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="met-editor lazyload clearfix">
+                            <div>
+                                <p>
+                                    常见异常汇总
+                                    <br>
+                                    ArithmeticExecption——算术异常类。
+                                    <br>
+                                    NullPointerException——空指针异常类。
+                                    <br>
+                                    ClassCastException——类型强制转换异常。
+                                    <br>
+                                    NegativeArrayException——数组负下标异常。
+                                    <br>
+                                    ArrayIndexOutOfBoundsException——数组下标越界异常。
+                                    <br>
+                                    SecturityException——违背安全原则异常。
+                                    <br>
+                                    EOFException——文件已结束异常。
+                                    <br>
+                                    FileNotFoundException——文件未找到异常。
+                                    <br>
+                                    NumberFormatException——字符串转换为数字异常。
+                                    <br>
+                                    SQLException——操作数据库异常。
+                                    <br>
+                                    IOException——输入输出异常。
+                                    <br>
+                                    NoSuchMethodException——方法未找到异常。
+                                    <br>
+                                    java.lang.AbstractMethodError——抽象方法错误。
+                                    <br>
+                                    当应用试图调用抽象方法时抛出。
+                                    <br>
+                                    java.lang.AssertionError——断言错。
+                                    <br>
+                                    用来指示一个断言失败的情况。
+                                    <br>
+                                    java.lang.ClassCircularityError——类循环依赖错误。
+                                    <br>
+                                    在初始化一个类时，若检测到类之间循环依赖则抛出该异常。
+                                    <br>
+                                    java.lang.ClassFormatError——类格式错误。
+                                    <br>
+                                    当Java虚拟机试图从一个文件中读取Java类，而检测到该文件的内容不符合类的有效格式时抛出。
+                                    <br>
+                                    java.lang.Error——错误。
+                                    <br>
+                                    是所有错误的基类，用于标识严重的程序运行问题。
+                                    <br>
+                                    这些问题通常描述一些不应被应用程序捕获的反常情况。
+                                    <br>
+                                    java.lang.ExceptionInInitializerError——初始化程序错误。
+                                    <br>
+                                    当执行一个类的静态初始化程序的过程中，发生了异常时抛出。
+                                    <br>
+                                    静态初始化程序是指直接包含于类中的static语句段。
+                                    <br>
+                                    java.lang.IllegalAccessError——违法访问错误。
+                                    <br>
+                                    当一个应用试图访问、修改某个类的域（Field）或者调用其方法，但是又违反域或方法的可见性声明，则抛出该异常。
+                                    <br>
+                                    java.lang.IncompatibleClassChangeError——不兼容的类变化错误。
+                                    <br>
+                                    当正在执行的方法所依赖的类定义发生了不兼容的改变时，抛出该异常。
+                                    <br>
+                                    一般在修改了应用中的某些类的声明定义而没有对整个应用重新编译而直接运行的情况下，容易引发该错误。
+                                    <br>
+                                    java.lang.InstantiationError——实例化错误。
+                                    <br>
+                                    当一个应用试图通过Java的new操作符构造一个抽象类或者接口时抛出该异常。
+                                    <br>
+                                    java.lang.InternalError——内部错误。
+                                    <br>
+                                    用于指示Java虚拟机发生了内部错误。
+                                    <br>
+                                    java.lang.LinkageError——链接错误。
+                                    <br>
+                                    该错误及其所有子类指示某个类依赖于另外一些类，在该类编译之后，被依赖的类改变了其类定义而没有重新编译所有的类，进而引发错误的情况。
+                                    <br>
+                                    java.lang.NoClassDefFoundError——未找到类定义错误。
+                                    <br>
+                                    当Java虚拟机或者类装载器试图实例化某个类，而找不到该类的定义时抛出该错误。
+                                    <br>
+                                    java.lang.NoSuchFieldError——域不存在错误。
+                                    <br>
+                                    当应用试图访问或者修改某类的某个域，而该类的定义中没有该域的定义时抛出该错误。
+                                    <br>
+                                    java.lang.NoSuchMethodError——方法不存在错误。
+                                    <br>
+                                    当应用试图调用某类的某个方法，而该类的定义中没有该方法的定义时抛出该错误。
+                                    <br>
+                                    java.lang.OutOfMemoryError——内存不足错误。
+                                    <br>
+                                    当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。
+                                    <br>
+                                    java.lang.StackOverflowError——堆栈溢出错误。
+                                    <br>
+                                    当一个应用递归调用的层次太深而导致堆栈溢出时抛出该错误。
+                                    <br>
+                                    java.lang.ThreadDeath——线程结束。
+                                    <br>
+                                    当调用Thread类的stop方法时抛出该错误，用于指示线程结束。
+                                    <br>
+                                    java.lang.UnknownError——未知错误。
+                                    <br>
+                                    用于指示Java虚拟机发生了未知严重错误的情况。
+                                    <br>
+                                    java.lang.UnsatisfiedLinkError——未满足的链接错误。
+                                    <br>
+                                    当Java虚拟机未找到某个类的声明为native方法的本机语言定义时抛出。
+                                    <br>
+                                    java.lang.UnsupportedClassVersionError——不支持的类版本错误。
+                                    <br>
+                                    当Java虚拟机试图从读取某个类文件，但是发现该文件的主、次版本号不被当前Java虚拟机支持的时候，抛出该错误。
+                                    <br>
+                                    java.lang.VerifyError——验证错误。
+                                    <br>
+                                    当验证器检测到某个类文件中存在内部不兼容或者安全问题时抛出该错误。
+                                    <br>
+                                    java.lang.VirtualMachineError——虚拟机错误。
+                                    <br>
+                                    用于指示虚拟机被破坏或者继续执行操作所需的资源不足的情况。
+                                    <br>
+                                    java.lang.ArithmeticException——算术条件异常。
+                                    <br>
+                                    譬如：整数除零等。
+                                    <br>
+                                    java.lang.ArrayIndexOutOfBoundsException——数组索引越界异常。
+                                    <br>
+                                    当对数组的索引值为负数或大于等于数组大小时抛出。
+                                    <br>
+                                    java.lang.ArrayStoreException——数组存储异常。
+                                    <br>
+                                    当向数组中存放非数组声明类型对象时抛出。
+                                    <br>
+                                    java.lang.ClassCastException——造型异常。
+                                    <br>
+                                    假设有类A和B（A不是B的父类或子类），O是A的实例，那么当强制将O构造为类B的实例时抛出该异常。
+                                    <br>
+                                    该异常经常被称为强制类型转换异常。
+                                    <br>
+                                    java.lang.ClassNotFoundException——不到类异常。
+                                    <br>
+                                    当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。
+                                    <br>
+                                    java.lang.CloneNotSupportedException——支持克隆异常。
+                                    <br>
+                                    当没有实现Cloneable接口或者不支持克隆方法时,调用其clone()方法则抛出该异常。
+                                    <br>
+                                    java.lang.EnumConstantNotPresentException——举常量不存在异常。
+                                    <br>
+                                    当应用试图通过名称和枚举类型访问一个枚举对象，但该枚举对象并不包含常量时，抛出该异常。
+                                    <br>
+                                    java.lang.Exception——异常。
+                                    <br>
+                                    用以描述应用程序希望捕获的情况。
+                                    <br>
+                                    java.lang.IllegalAccessException——法的访问异常。
+                                    <br>
+                                    当应用试图通过反射方式创建某个类的实例、访问该类属性、调用该类方法，而当时又无法访问类的、属性的、方法的或构造方法的定义时抛出该异常。
+                                    <br>
+                                    java.lang.IllegalMonitorStateException——法的监控状态异常。
+                                    <br>
+                                    当某个线程试图等待一个自己并不拥有的对象（O）的监控器或者通知其他线程等待该对象（O）的监控器时，抛出该异常。
+                                    <br>
+                                    java.lang.IllegalStateException——法的状态异常。
+                                    <br>
+                                    当在Java环境和应用尚未处于某个方法的合法调用状态，而调用了该方法时，抛出该异常。
+                                    <br>
+                                    java.lang.IllegalThreadStateException——法的线程状态异常。
+                                    <br>
+                                    当县城尚未处于某个方法的合法调用状态，而调用了该方法时，抛出异常。
+                                    <br>
+                                    java.lang.IndexOutOfBoundsException——引越界异常。
+                                    <br>
+                                    当访问某个序列的索引值小于0或大于等于序列大小时，抛出该异常。
+                                    <br>
+                                    java.lang.InstantiationException——例化异常。
+                                    <br>
+                                    当试图通过newInstance()方法创建某个类的实例，而该类是一个抽象类或接口时，抛出该异常。
+                                    <br>
+                                    java.lang.InterruptedException——中止异常。
+                                    <br>
+                                    当某个线程处于长时间的等待、休眠或其他暂停状态，而此时其他的线程通过Thread的interrupt方法终止该线程时抛出该异常。
+                                    <br>
+                                    java.lang.NegativeArraySizeException——组大小为负值异常。
+                                    <br>
+                                    当使用负数大小值创建数组时抛出该异常。
+                                    <br>
+                                    ——ava.lang.NoSuchFieldException——性不存在异常。
+                                    <br>
+                                    当访问某个类的不存在的属性时抛出该异常。
+                                    <br>
+                                    java.lang.NoSuchMethodException——法不存在异常。
+                                    <br>
+                                    当访问某个类的不存在的方法时抛出该异常。
+                                    <br>
+                                    java.lang.NullPointerException——指针异常。
+                                    <br>
+                                    当应用试图在要求使用对象的地方使用了null时，抛出该异常。
+                                    <br>
+                                    譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等。
+                                    <br>
+                                    java.lang.NumberFormatException——字格式异常。
+                                    <br>
+                                    当试图将一个String转换为指定的数字类型，而该字符串确不满足数字类型要求的格式时，抛出该异常。
+                                    <br>
+                                    java.lang.RuntimeException——行时异常。
+                                    <br>
+                                    是所有Java虚拟机正常操作期间可以被抛出的异常的父类。
+                                    <br>
+                                    ——ava.lang.SecurityException——全异常。
+                                    <br>
+                                    由安全管理器抛出，用于指示违反安全情况的异常。
+                                    <br>
+                                    java.lang.StringIndexOutOfBoundsException——符串索引越界异常。
+                                    <br>
+                                    当使用索引值访问某个字符串中的字符，而该索引值小于0或大于等于序列大小时，抛出该异常。
+                                    <br>
+                                    java.lang.TypeNotPresentException——型不存在异常。
+                                    <br>
+                                    当应用试图以某个类型名称的字符串表达方式访问该类型，但是根据给定的名称又找不到该类型是抛出该异常。
+                                    <br>
+                                    该异常与ClassNotFoundException的区别在于该异常是unchecked（不被检查）异常，而ClassNotFoundException是checked（被检查）异常。
+                                    <br>
+                                    java.lang.UnsupportedOperationException——支持的方法异常。
+                                    <br>
+                                    指明请求的方法不被支持情况的异常。
+                                    <br>
+                                    其他
+
+1.异常
+                                    <br>
+                                    javax.servlet.jsp.JspException: Cannot retrieve mapping for action /Login （/Login是你的action名字）
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    action没有再struts-config.xml 中定义，或没有找到匹配的action，例如在JSP文件中使用
+                                    <br>
+                                    2.异常
+                                    <br>
+                                    org.apache.jasper.JasperException: Cannot retrieve definition for form bean null
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    这个异常是因为Struts根据struts-config.xml中的mapping没有找到action期望的form bean。
+                                    <br>
+                                    大部分的情况可能是因为在form-bean中设置的name属性和action中设置的name属性不匹配所致。
+                                    <br>
+                                    换句话说，action和form都应该各自有一个name属性，并且要精确匹配，包括大小写。
+                                    <br>
+                                    这个错误当没有name属性和action关联时也会发生，如果没有在action中指定name属性，那么就没有name属性和action相关联。
+                                    <br>
+                                    当然当action制作某些控制时，譬如根据参数值跳转到相应的jsp页面，而不是处理表单数据，这是就不用name属性，这也是action的使用方法之一。
+                                    <br>
+                                    3.异常
+                                    <br>
+                                    No action instance for path /xxxx could be created
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    特别提示：因为有很多中情况会导致这个错误的发生，所以推荐大家调高你的web服务器的日志/调试级别，这样可以从更多的信息中看到潜在的、在试图创建action类时发生的错误，这个action类你已经在struts-config.xml中设置了关联（即添加了标签）。
+                                    <br>
+                                    在struts-config.xml中通过action标签的class属性指定的action类不能被找到有很多种原因，例如：定位编译后的.class文件失败。
+                                    <br>
+                                    Failure to place compiled .class file for the action in the classpath (在web开发中，class的的位置在r WEB-INF/classes，所以你的action class必须要在这个目录下。
+                                    <br>
+                                    例如你的action类位于WEB-INF/classes/action/Login.class,那么在struts-config.xml中设置action的属性type时就是action.Login)。
+                                    <br>
+                                    拼写错误，这个也时有发生，并且不易找到，特别注意第一个字母的大小写和包的名称。
+                                    <br>
+                                    4.异常
+                                    <br>
+                                    javax.servlet.jsp.JspException: No getter method for property username of bean org.apache.struts.taglib.html.BEAN
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    没有位form bean中的某个变量定义getter 方法
+                                    <br>
+                                    这个错误主要发生在表单提交的FormBean中，用struts标记时，在FormBean中必须有一个getUsername()方法。
+                                    <br>
+                                    注意字母“U”。
+                                    <br>
+                                    5.异常
+                                    <br>
+                                    java.lang.NoClassDefFoundError: org/apache/struts/action/ActionForm
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    这个错误主要发生在在classpath中找不到相应的Java .class文件。
+                                    <br>
+                                    如果这个错误发生在web应用程序的运行时，主要是因为指定的class文件不在web server的classpath中（/WEB-INF/classes 和 /WEB-INF/lib）。
+                                    <br>
+                                    在上面的错误中，原因是找不到ActionForm类。
+                                    <br>
+                                    6.异常
+                                    <br>
+                                    javax.servlet.jsp.JspException: Exception creating bean of class org.apache.struts.action.ActionForm: {1}
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    Instantiating Struts-provided ActionForm class directly instead of instantiating a class derived off ActionForm. This mightoccur implicitly if you specify that a form-bean is this Struts ActionForm class rather than specifying a child of this classfor the form-bean.
+                                    <br>
+                                    Not associating an ActionForm-descended class with an action can also lead to this error.
+                                    <br>
+                                    7.异常
+                                    <br>
+                                    javax.servlet.jsp.JspException: Cannot find ActionMappings or ActionFormBeans collection
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    不是标识Struts actionServlet的标记就是映射.do扩展名的标记或者两者都没有在web.xml中声明。
+                                    <br>
+                                    在struts-config.xml中的打字或者拼写错误也可导致这个异常的发生。
+                                    <br>
+                                    例如缺少一个标记的关闭符号/>。
+                                    <br>
+                                    最好使用struts console工具检查一下。
+                                    <br>
+                                    另外，load-on-startup必须在web.xml中声明，这要么是一个空标记，要么指定一个数值，这个数值用来表servlet运行的优先级，数值越大优先级越低。
+                                    <br>
+                                    还有一个和使用load-on-startup有关的是使用Struts预编译JSP文件时也可能导致这个异常。
+                                    <br>
+                                    8.异常
+                                    <br>
+                                    java.lang.NullPointerException at org.apache.struts.util.RequestUtils.forwardURL(RequestUtils.java:1223)
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    在struts-config.xml中的forward元素缺少path属性。
+                                    <br>
+                                    例如应该是如下形式：
+                                    <forward name="userhome" path="/user/userhome.jsp"/>
+                                    9.异常
+                                    <br>
+                                    javax.servlet.jsp.JspException: Cannot find bean org.apache.struts.taglib.html.BEAN in any scope
+                                    <br>
+                                    可能原因
+                                    <br>
+                                    试图在Struts的form标记外使用form的子元素。
+                                    <br>这常常发生在你在</html:form>
+                                后面使用Struts的html标记。
+                                <br>
+                                另外要注意可能你不经意使用的无主体的标记，如
+                                <html:form … />
+                                ，这样web 服务器解析时就当作一个无主体的标记，随后使用的所有
+                                <html>
+                                    标记都被认为是在这个标记之外的，如又使用了
+                                    <html:text property=”id”>
+                                        还有就是在使用taglib引入HTML标记库时，你使用的prefix的值不是html。
+                                        <br>
+                                        10.异常
+                                        <br>
+                                        javax.servlet.jsp.JspException: Missing message for key xx.xx.xx
+                                        <br>
+                                        可能原因
+                                        <br>
+                                        这个key的值对没有在资源文件ApplicationResources.properties中定义。
+                                        <br>
+                                        如果你使用eclipse时经常碰到这样的情况，当项目重新编译时，eclipse会自动将classes目录下的资源文件删除。
+                                        <br>
+                                        资源文件ApplicationResources.properties 不在classpath中应将资源文件放到 WEB-INF/classes 目录下，当然要在struts-config.xml中定义)
+
+11.异常
+                                        <br>
+                                        Cannot find message resources under key org.apache.struts.action.MESSAGE
+                                        <br>
+                                        可能原因
+                                        <br>
+                                        很显然，这个错误是发生在使用资源文件时，而Struts没有找到资源文件。
+                                        <br>
+                                        Implicitly trying to use message resources that are not available (such as using empty html:options tag instead of specifyingthe options in its body -- this assumes options are specified in ApplicationResources.properties file)
+                                        <br>
+                                        XML parser issues -- too many, too few, incorrect/incompatible versions
+                                        <br>
+                                        12.异常
+                                        <br>
+                                        Strange and seemingly random characters in HTML and on screen, but not in original JSP or servlet.
+                                        <br>
+                                        可能原因
+                                        <br>
+                                        混和使用Struts的html:form标记和标准的HTML标记不正确。
+                                        <br>
+                                        使用的编码样式在本页中不支持。
+                                        <br>
+                                        13.异常
+                                        <br>
+                                        "Document contained no data" in Netscape
+                                        <br>
+                                        No data rendered (completely empty) page in Microsoft Internet Explorer
+                                        <br>
+                                        可能原因
+                                        <br>
+                                        使用一个Action的派生类而没有实现perform()方法或execute()方法。
+                                        <br>
+                                        在Struts1.0中实现的是perform()方法，在Struts1.1中实现的是execute()方法，但Struts1.1向后兼容perform()方法。
+                                        <br>
+                                        但你使用Struts1.1创建一个Action的派生类，并且实现了execute()方法，而你在Struts1.0中运行的话，就会得到"Document contained nodata" error message in Netscape or a completely empty (no HTML whatsoever) page rendered in Microsoft Internet Explorer.”的错误信息。
+                                        <br>
+                                        14.异常
+                                        <br>ServletException: BeanUtils.populate</p>
+                                    <p>&nbsp;</p>
+                                    <div data-exthumbimage="img/wenti/javayic.png&quot;"
+                                    data-src="img/wenti/javayic.png">
+                                        <img alt="77种Java异常总结" data-height="660" data-original="img/wenti/javayic.png"
+                                        data-width="1460" src="img/wenti/javayic.png" style="width: 1460px; height: 660px;"
+                                        title="77种Java异常总结" />
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div id="metinfo_additional"></div>
+                                </div>
+                            </div>
+                            <div class="met-shownews-footer">
+                                <ul class="pager pager-round">
+                                    <li class='previous'>
+                                        <a href='newsshow.html'>
+                                            上一篇：
+                                            <span aria-hidden='true' class='hidden-xs'> import org.junit.Test 和@Test报错---解决方案大全</span>
+                                        </a>
+                                    </li>
+                                    <li class='next'>
+                                        <a href='newsshow.html'>
+                                            下一篇：
+                                            <span aria-hidden='true' class='hidden-xs'>前端转化ajax返回数据成json的三种方法</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="met-news-bar">
+                                <form name="formsearch" action="#">
+                                    <input type="hidden" name="kwtype" value="0" />
+                                    <div class="form-group">
+                                        <div class="input-search">
+                                            <button type="submit" class="input-search-btn"> <i class="icon wb-search" aria-hidden="true"></i>
+                                            </button>
+                                            <input type="text" class="form-control" name="q" placeholder="Search"></div>
+                                    </div>
+                                </form>
+                                <!--string(4) "news" -->
+                                <div class="recommend news-list-md">
+                                    <h3>为您推荐</h3>
+                                    <ul class="list-group list-group-bordered">
+                                        <li class="list-group-item">
+                                            <a href="newsshow.html"​ title="import org.junit.Test 和@Test报错---解决方案大全"
+                                            target='_self'>import org.junit.Test 和@Test报错---解决方案大全</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="newsshow.html"​ title="web工程的搭建上传服务器"
+                                            target='_self'>web工程的搭建上传服务器</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="newsshow.html"​ title="前端转化ajax返回数据成json的三种方法" target='_self'>前端转化ajax返回数据成json的三种方法</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="newsshow.html"​ title="eclipse报错：Multiple annotations found at this line: - String cannot be resolved to a type解决方法实测" target='_self'>eclipse报错：Multiple annotations found at this line: - String cannot be resolved to a type解决方法实测</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="column">
+                                    <li>
+                                        <a href="news.html"​ title="所有文章" target='_self'>所有文章</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html"​>技术要领</a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html"​>行业资讯</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container text-center">
+                <p>CopyRight ©2018-10-28 张成 版权所有</p>
+                <p></p>
+                <div class="powered_by_metinfo">
+                    <!--友情链接：
+                    <a href="http://www.mycodes.net/"&#8203; target="_blank">网站模板</a>
+                -->
+            </div>
+        </div>
+    </footer>
+    <button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide">
+        <i class="icon wb-chevron-up" aria-hidden="true"></i>
+    </button>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
