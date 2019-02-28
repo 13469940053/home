@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="Keywords" content="无浪网————3D城市">
+    <meta name="Description" content="3D城市">
+    <meta name="autor" content="张成">
+    <title>3D城市</title>
+    <style class="cp-pen-styles">html {
+    position: relative;
+    width: 100%; height: 100%;
+    min-width: 400px;
+    min-height: 400px;
+}
+body {
+    margin: 0;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    /*background: #F2F9FF;*/
+    background-image:-webkit-radial-gradient(circle at top right,#5596BC,#75BEC7);
+    background-image:-moz-radial-gradient(circle at top right,#5596BC,#75BEC7);
+    background-image:-o-radial-gradient(circle at top right,#5596BC,#75BEC7);
+    background-image:-ms-radial-gradient(circle at top right,#5596BC,#75BEC7);
+    background-image:radial-gradient(circle at top right,#5596BC,#75BEC7);
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    perspective: 500px;
+}
+div, a, b, i {
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+}
+a, b, i {
+    box-shadow: inset 0 0 1px rgba(35,49,51,1);
+}
+a, b {
+    background-position: center center;
+}
+
+#demo {
+    top: 50%; left: 50%;
+    box-shadow: 0 0 0 12px rgba(208,228,239,1);
+    -webkit-animation: spin 16s linear infinite;
+    -moz-animation: spin 16s linear infinite;
+    animation: spin 16s linear infinite;
+}
+#demo div {
+}
+#demo div a {
+    bottom: 0; left: 0;
+    width: 100%;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+#demo div b {
+    top: 0; left: 100%;
+    height: 100%;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+#demo div i {
+    left: 0; bottom: 100%;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+#demo a {
+    background-color: rgba(176,208,223,0.9);
+}
+#demo a > b {
+    background-color: rgba(128,174,197,0.9);
+}
+#demo a > b > b {
+    background-color: rgba(176,208,223,0.9);
+
+}
+#demo a > b > b > b {
+    background-color: rgba(128,174,197,0.9);
+}
+#demo i {
+    background-color: rgba(237,248,254,0.9);
+}
+
+div.a a, div.a b {
+    background-image: url('img/hGf4V.png');
+}
+div.b a, div.b b {
+    background-image: url('img/lWCVU.png');
+}
+div.c a, div.c b {
+    background-image: url('img/lzWht.png');
+}
+div.d a, div.d b {
+    background-image: url('img/2LXlE.png');
+}
+div.e a, div.e b {
+    background-image: url('img/uP9er.png');
+}
+
+@-webkit-keyframes spin {
+    from {-webkit-transform: rotateX(60deg) rotateZ(-180deg);}
+    to   {-webkit-transform: rotateX(60deg) rotateZ(180deg);}
+}
+@-moz-keyframes spin {
+    from {-moz-transform: rotateX(60deg) rotateZ(-180deg);}
+    to   {-moz-transform: rotateX(60deg) rotateZ(180deg);}
+}
+@keyframes spin {
+    from {transform: rotateX(60deg) rotateZ(-180deg);}
+    to   {transform: rotateX(60deg) rotateZ(180deg);}
+}</style>
+</head>
+<body>
+    <div id="demo">
+        <!--
+    W - width, H - height, L - length
+
+    <div>
+        -> width: W, height: H
+        <a>
+            -> height: L <b>-> width: H <b>-> width: W
+                    <b>
+                        -> width: H <i>-> width: H; height: W
+    -->
+                        </div>
+
+                        <script>var D = {
+
+    base: 6,
+    size: 40,
+    space: 6,
+    height: {
+        min: 10,
+        max: 80
+    },
+    type: ['a', 'b', 'c', 'd', 'e'],
+    bldg: '<a><b><b><b><i></i></b></b></b></a>',
+
+    Random: function(min, max) {
+        var value = Math.random() * (max - min) + min;
+        return Math.round(value);
+    },
+
+
+    Build: function() {
+        for (var x = 0; x < D.base; x++) {
+            for (var y = 0; y < D.base; y++) {
+
+                var e = D.data[x * D.base + y];
+                var w = D.Random(D.space, D.size - D.space);
+                var h = D.Random(D.space, D.size - D.space);
+                var l = D.Random(D.space / 2, D.size - w);
+                var t = D.Random(D.space / 2, D.size - h);
+                var z = D.Random(D.height.min, D.height.max);
+                var i = D.Random(0, D.type.length - 1);
+                var c = e.getElementsByTagName('*');
+
+                e.className = D.type[i];
+
+                e.style.width = w + 'px';
+                e.style.height = h + 'px';
+                e.style.left = x * D.size + l + 'px';
+                e.style.top = y * D.size + t + 'px';
+
+                c[0].style.height = z + 'px';
+                c[1].style.width = h + 'px';
+                c[2].style.width = w + 'px';
+                c[3].style.width = h + 'px';
+                c[4].style.width = h + 'px';
+                c[4].style.height = w + 'px';
+            }
+        }
+    },
+
+    Create: function() {
+        for (var i = 0; i < D.base * D.base; i++) {
+            var div = document.createElement('div');
+            div.innerHTML = D.bldg;
+            D.demo.appendChild(div);
+        }
+        D.data = D.demo.getElementsByTagName('div');
+    },
+
+    Init: function() {
+        var l = D.base * D.size;
+        D.demo = document.getElementById('demo');
+        D.demo.style.width = D.demo.style.height = l + 'px';
+        D.demo.style.marginTop = D.demo.style.marginLeft = -l / 2 + 'px';
+        D.demo.addEventListener('click', D.Build, false);
+    },
+
+    Run: function() {
+        D.Init();
+        D.Create();
+        D.Build();
+    }
+
+};
+
+D.Run();
+</script></body>
+                    </html>
